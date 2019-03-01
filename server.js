@@ -1,6 +1,8 @@
 const { MongoClient } = require("mongodb");
-const uri = 'mongodb://iapp:iapptech12345@ds155665.mlab.com:55665/heroku_02qpmwnv';  // mongodb://localhost - will fail
+const uri = 'mongodb://iapp:iapptech12345@ds127655.mlab.com:27655/heroku_mrj8ggb5';  // mongodb://localhost - will fail
 
+
+mongodb://<dbuser>:<dbpassword>@ds127655.mlab.com:27655/heroku_mrj8ggb5
 let seedData = [
   {
     decade: '1970s',
@@ -28,7 +30,7 @@ let seedData = [
     const client = await MongoClient.connect(uri,{ useNewUrlParser: true });
     
 
-    let db = client.db('heroku_02qpmwnv');
+    let db = client.db('heroku_mrj8ggb5');
     let songs = db.collection('songs');
     
       console.log("here");
